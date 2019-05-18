@@ -122,7 +122,8 @@ export default function run(results: PromptResults, parseResults: ParseResults, 
               label = titleize(classes.replace(' outline', ''));
             } else if(classes.startsWith('cc ')) {
               label = titleize(classes.slice(3)) + ' Credit Card';
-            } else if(classes.endsWith('00px')) {
+            } else if(classes == '\\35 00px') { // uhm, why does it come out like that?
+              classes = '500px';
               label = '500px';
             } else {
               label = titleize(classes);
