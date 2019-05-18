@@ -25,7 +25,7 @@ export default function run() {
               .then((Parser) => {
                 Parser.default(results, paths)
                   .then((parseResults: ParseResults) => {
-                    BuildDist(results, parseResults)
+                    BuildDist(results, parseResults, process.argv.includes('--manifest'))
                       .then(() => {
                         process.exit(0);
                       });
