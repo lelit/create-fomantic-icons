@@ -135,6 +135,7 @@ export default function run(results: PromptResults, parseResults: ParseResults, 
           });
         });
         stream.close();
+        Logger.log(`  Manifest saved to ${manifestFile}`);
       }
       resolveDump();
     });
